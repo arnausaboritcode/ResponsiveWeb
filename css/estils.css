@@ -1,0 +1,702 @@
+html {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+ /*Header*/
+
+.container {
+    width: 95%;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flexContainer{
+    width: 100%;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+
+nav ul {
+    list-style-type: none;
+    display: inline-flex;
+    margin-top: 1.35rem;
+}
+
+nav ul>li {
+    padding: 10px;
+
+}
+
+header a{
+    text-decoration: none;
+    color: rgb(93, 95, 121);
+    
+}
+
+header a:hover{
+   color: rgb(245, 157, 35);
+
+}
+
+header h1::before {
+    background-image: url(../img/logo-ciencia-tecnologia.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    display: inline-block;
+    width: 5rem; 
+    height: 3rem;
+    margin-right: 2px;
+    content:"";
+    
+}
+
+header h1 {
+    font-size: 13px;
+    color: rgb(0, 0, 0);
+    margin-top: 1.25rem;
+
+}
+
+@media screen and (max-width:900px) {
+
+    header h1 {
+        text-align: center;
+    }
+    .flexContainer {
+        display: block;
+    }
+    nav {
+        text-align: center;
+    }
+    nav ul{
+        display: block;
+        margin-top: 1.25rem;
+        margin-bottom: 4rem;
+        padding-left: 0;
+    }
+
+    nav ul>li{
+        padding: 0;
+        text-align: center;
+    }
+    nav ul>li h5 {
+        margin: 5px;
+    }
+}
+
+/*media queries main */
+
+@media screen and (max-width:600px) {
+
+    .container {
+        width: 92%;
+        margin: 0rem 1rem 0rem 1rem;
+    }
+    body, html {
+        width: 100%;
+        overflow-x: hidden;
+        
+    }
+}
+
+
+/*index.html - Primer grid*/
+
+.gridIndex {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-content: center;
+}
+
+.gridIndex .textContent {
+    background-color:rgb(245, 157, 35);
+    padding: 1.9rem;
+    text-align: left; 
+}
+
+.gridIndex .textContent p {
+    font-size: 1rem;
+    line-height: 1.5;
+    
+}
+
+.gridIndex .textContent h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.gridIndex .imageContent {
+    background-color: rgb(240, 93, 80);
+    background-image: url(../img/hero-athom.png);
+    background-repeat: no-repeat;
+    background-size: 12rem;
+    background-position: center;
+    display: block;
+    content:"";
+    padding: 6rem;
+}
+
+
+/*index.html - Media queries primer grid*/
+
+@media screen and (max-width:900px) {
+    
+    .gridIndex .textContent, .gridIndex .imageContent{
+        grid-column: 1 / -1;
+        justify-content: center;
+    }
+
+    .gridIndex .textContent h1 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-top: 0;
+       
+    }
+    .gridIndex .textContent {
+        padding: 10px;
+    }
+}
+
+/*index.html - Segundo grid*/
+
+.gridIndex2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 3rem;
+    justify-content: center;
+}
+
+.gridIndex2 .subTitleIndex {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 10px;
+    grid-column: span 4;
+}
+
+.gridIndex2 .subTitleIndex h1 {
+    font-size: 1.5rem;
+    margin-bottom:0;
+
+}
+
+.gridIndex2 .subTitleIndex a {
+    font-size: 13px;
+    margin-top: 0;
+    color: rgb(245, 157, 35);
+    text-decoration: none;
+    
+}
+
+.gridIndex2 a {
+    text-decoration: none;
+    color:rgb(93, 95, 121);  
+    
+    
+}
+
+.gridIndex2 a:hover {
+    text-decoration: none;
+    color:rgb(245, 157, 35);
+}
+
+.gridIndex2 figure {
+    text-align: center;
+    width: fit-content;
+
+   
+}
+
+.gridIndex2 figcaption p {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.gridIndex2 figcaption {
+  
+    text-align: left;
+    font-size: 13px;
+    margin-top: 5px;
+   
+
+}
+
+/*index.html - Media queries segundo grid*/
+
+@media screen and (max-width:900px) {
+
+   .gridIndex2 a{
+    
+   grid-column: span 2;
+   display: flex;
+   justify-content: center;
+
+   }
+}
+
+@media screen and (max-width:600px)  {
+    
+    .gridIndex2 a{
+     
+    grid-column: 1 / -1;
+    text-align: center;
+ 
+    }
+    .gridIndex2 figcaption {
+        text-align: center;
+    }
+
+    .gridIndex2 figure img {
+        width: 92vw;
+        height: 74vw;
+    }
+
+    
+    
+ }
+
+ /* referents. html */
+
+.title {
+    text-align: center;
+    font-size: 2.7rem;
+    margin-top: 0;
+    font-weight: 800;
+}
+
+.gridReferents {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+    column-gap: 1.9rem;
+    row-gap: 15px;
+    margin-bottom: 3rem;
+}
+
+.gridReferents ul {
+    list-style-type: none;
+    line-height: 0.4;
+    margin-bottom: -3rem;
+}
+.gridReferents ul a {
+    color: rgb(245, 157, 35);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.gridReferents ul a:hover {
+    color: rgb(93, 95, 121);
+}
+
+.womenNames {
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+}
+
+.womenNames h1 {
+    color: rgb(240, 93, 80);
+    font-weight: 800;
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+.womenNames h1 + p{
+    color:rgb(93, 95, 121);
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 0;
+    
+}
+
+.womenNames h1 + p + p{
+    color:rgb(93, 95, 121);
+    font-size: 1rem;
+    font-weight: 800;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.womenNames h1 + p + p + p{
+    color:rgb(93, 95, 121);
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+.gridReferents figure {
+    display: inline-flex;
+    
+}
+
+.gridReferents figcaption {
+    color: rgb(93, 95, 121);
+    font-size: 13px;
+    padding: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.gridReferents figcaption a {
+    color: rgb(245, 157, 35);
+    text-decoration: none;
+    font-size: 13px;
+    
+}
+
+.gridReferents figure + div {
+    z-index: -1;
+}
+
+
+@media screen and (max-width:900px) {
+
+    .gridReferents ul{
+     
+    grid-column: span 3;
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    width: 85%;
+    margin-bottom: 10px;
+    line-height: 0;
+    
+    }
+
+    .gridReferents li a::after {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        content: " ‧ ";
+        padding:4px;
+    }
+
+    .gridReferents #last::after {
+        content:" ";
+        margin-top: 5px;
+    }
+
+    .gridReferents figure + div {
+        grid-column: span 3;
+    }
+    
+
+    .gridReferents figure{
+        grid-column:span 2;
+
+    }
+    .womenNames {
+        margin-left:3rem;
+    }
+    
+ }
+
+ @media screen and (max-width:600px)  {
+    
+    .gridReferents figure{
+     
+    grid-column: 1 / -1;
+    display: block;
+    text-align: center;
+    margin: 0;
+    }
+
+    .gridReferents figure img {
+        width: 92vw;
+        height: 74vw;
+    }
+
+    .gridReferents figcaption {
+        grid-column: 1 / -1;
+        text-align: left;
+    }
+
+    .womenNames {
+        margin: 0;
+    }
+ }
+
+
+/*11-de-febrer.html*/
+
+.title {
+    text-align: center;
+    font-size: 2.7rem;
+    margin-top: 0;
+    font-weight: 800;
+}
+
+.subTitleOnzeFebrer {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.onzeFebrerContent {
+    text-align: left;
+    margin-top: 1.4rem;
+}
+
+.onzeFebrerContent p{
+    color: rgb(93, 95, 121);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.onzeFebrerContent figure {
+    margin: auto;
+    margin-bottom: 4.5rem;
+   width: fit-content;
+
+   
+}
+
+.onzeFebrerContent figcaption {
+    font-size: 13px;
+    color: rgb(93, 95, 121);
+    text-align: left;
+}
+
+.onzeFebrerBqContent {
+    background-color: rgb(227, 228, 230);
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px 20px 20px 20px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.onzeFebrerBqContent p{
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+
+.rectangle {
+    width: 2.4rem;
+    height: 6px;
+    background-color: rgb(240, 93, 80);
+    display: inline-flex;
+}
+
+.rectangle + p {
+    font-size: 13px;
+    display: inline-flex;
+    margin-left: 10px;
+}
+
+/*11-de-febrer.html - Media queries*/
+
+@media screen and (max-width:900px) {
+  
+    .onzeFebrerBqContent {
+        width: unset;
+    }
+
+    .onzeFebrerContent figure iframe {
+        width: 95vw;
+        height: 55vw;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .onzeFebrerContent figure iframe {
+        width: 92vw;
+        height: 53vw;
+    }
+}
+
+/*iniciatives.html*/
+
+.title {
+    text-align: center;
+    font-size: 2.7rem;
+    margin-top: 0;
+    font-weight: 800;
+}
+
+dl {
+    margin-bottom: 2.5rem;
+}
+
+dt {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: rgb(93, 95, 121);
+    
+}
+
+dt::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-color: rgb(240, 93, 80);
+    display: inline-block;
+    vertical-align:baseline;
+    margin-right: 1.2rem;
+
+}
+
+dd {
+    color: rgb(93, 95, 121);
+    font-size: 1rem;
+    margin-top: 5px;
+    margin-left: 2.2rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+   
+}
+
+dl p{
+    margin-top: 0;
+    line-height: 1.5;
+}
+dl a {
+    color: rgb(245, 157, 35);
+    text-decoration: none;
+    font-size:13px;
+
+}
+
+
+ /*Footer*/
+
+ footer {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 2.2rem;
+    text-align: center;
+}
+
+footer h5 {
+    font-size: 13px;
+    margin-top: 5px;
+    margin-bottom: 2rem;
+    font-weight: normal;
+}
+
+footer h5::before {
+    background-image: url(../img/logo-ciencia-tecnologia-white.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position:center;
+    display: block;
+    width: 5rem; 
+    height: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    content:"";
+}
+
+footer form {
+    margin-top: 1.5rem;
+}
+
+.footerFormTitle {
+    font-size: 1.2rem;
+}
+
+ footer > form input[type=text] {
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    width: 34rem;
+    padding: 1rem;
+    color: rgb(255,255,255);
+    text-align: center;
+
+ }
+
+::placeholder {
+    text-align: center; 
+    font-size: 1rem;
+ }
+
+form label {
+    font-size: 14px;
+}
+
+.flex {
+    display: inline-flex;
+}
+
+footer > form input[type=submit] {
+    background-color: rgb(240, 93, 80);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border-style: none;
+    margin-top: 5px;
+}
+
+footer ul{
+    display: inline-flex;
+    list-style-type: none;
+    margin-left: -2.9rem;
+    margin-top: 0;
+}
+
+footer ul>li {
+    padding: 10px;
+    font-size: 14px;
+    margin-top: 1.3rem;
+
+}
+
+.footerSmallText {
+    font-size: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+footer a:hover {
+    color: rgb(245, 157, 35);
+}
+
+body {
+    margin: 0;
+
+}
+
+@media screen and (max-width:600px)  {
+
+    footer ul {
+        display: block;
+        margin-top:2rem;
+        margin-bottom: 2rem;
+        
+    }
+
+    footer ul>li {
+        margin-top: 0;
+        padding: 5px;
+    }
+
+    footer > form input[type=text] {
+        width: 65vw;
+    }
+
+    .footerFormTitle {
+        font-size: 14px;
+        
+    }
+}
